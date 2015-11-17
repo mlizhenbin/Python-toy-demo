@@ -11,8 +11,13 @@ print list[2:]  # 输出从第三个开始至列表末尾的所有元素
 print tinylist * 2  # 输出列表两次
 print list + tinylist  # 打印组合的列表
 
+index = 1
 for l in list:
-    print l
+    index = index + 1
+    if index == 3:
+        del l
+    else:
+        print l
 
 for l in tinylist:
     print l
