@@ -16,13 +16,21 @@ class Parent:  # 定义父类
     def getAttr(self):
         print "父类属性 :", Parent.parentAttr
 
-
-class Child(Parent):  # 定义子类
+class Test:  # 定义子类
     def __init__(self):
         print "调用子类构造方法"
 
     def childMethod(self):
         print '调用子类方法 child method'
+
+class Child(Parent, Test):  # 定义子类
+    def __init__(self):
+        print "调用子类构造方法"
+
+    def childMethod(self):
+        print '调用子类方法 child method'
+
+
 
 
 c = Child()  # 实例化子类
